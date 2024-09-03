@@ -24,6 +24,7 @@ jobs:
          ls -a
      - name: simple java script action
        id: hello
+       run: echo "hello world"
 
      - name: get output time
        run: echo output of time "${{ steps.hello.outputs.time }}"
