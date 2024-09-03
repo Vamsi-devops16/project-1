@@ -1,33 +1,36 @@
 name: shell commands
 on: [push]
+
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-     - name: string
-       run: echo " hello vamsi-devops16"
-     - name: multiline script
-       run: |
-         node -v
-         npm -v
-     - name: list-file
-       run: |
-         pwd
-         ls -a
+      - name: string
+        run: echo "hello vamsi-devops16"
         
-     - name: checkout
-       uses: actions/checkout@v1
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+          
+      - name: list-file
+        run: |
+          pwd
+          ls -a
+        
+      - name: checkout
+        uses: actions/checkout@v1
 
-     - name: list of files after checkout
-       run: |
-         pwd
-         ls -a
-     - name: simple java script action
-       id: hello
-       uses: actions/hello-world-javascript-actions@v1
-       with:
-         who-to-greet: vamsi-devops16
+      - name: list of files after checkout
+        run: |
+          pwd
+          ls -a
 
-     - name: get output time
-       run: echo output of time ${{ steps.hello.outputs.time }}
+      - name: simple java script action
+        id: hello
+        uses: actions/hello-world-javascript-actions@v1
+        with:
+          who-to-greet: vamsi-devops16
 
+      - name: get output time
+        run: echo "Output of time: ${{ steps.hello.outputs.time }}"
