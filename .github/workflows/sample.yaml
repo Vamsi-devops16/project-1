@@ -16,7 +16,7 @@ jobs:
          ls -a
         
      - name: checkout
-       uses: actions/checkout@v3
+       uses: actions/checkout@v1
 
      - name: list of files after checkout
        run: |
@@ -24,7 +24,7 @@ jobs:
          ls -a
      - name: simple java script action
        id: hello
-       uses: actions/hello-world-javascript-actions@v3
+       uses: actions/hello-world-javascript-actions@v1
        with:
          who-to-greet: vamsi-devops16
 
