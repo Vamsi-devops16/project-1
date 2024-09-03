@@ -9,7 +9,7 @@ jobs:
      - name: multiline script
        run: |
          node -v
-         np -v
+         npm -v
      - name: list-file
        run: |
          pwd
