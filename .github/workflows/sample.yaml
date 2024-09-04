@@ -15,7 +15,7 @@ jobs:
          pwd
          ls -a
          echo $GITHUB_SHA - {{ github.sha }}
-         echo $GITHU_WORKFLOW - {{ github.workflow }}
+         echo $GITHU_WORKFLOW - {{ github.workflow }} c
          echo $GITHUB_WORKSPACE - {{ github.workspace }}
          echo  {{ github.token }}
 
@@ -28,6 +28,7 @@ jobs:
          ls -a
      - name: simple java script action
        id: hello
+       run: hello world
 
      - name: get output time
        run: echo output of time "${{ steps.hello.outputs.time }}"
