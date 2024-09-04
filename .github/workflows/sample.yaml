@@ -26,9 +26,9 @@ jobs:
        run: |
          pwd
          ls -a
-     - name: simple java script action
+     - name: simple 
        id: hello
-       run: hello world
+       run: echo hello world
 
      - name: get output time
        run: echo output of time "${{ steps.hello.outputs.time }}"
