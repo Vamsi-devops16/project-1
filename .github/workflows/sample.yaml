@@ -14,7 +14,11 @@ jobs:
        run: |
          pwd
          ls -a
-        
+         echo $GITHUB_SHA - {{ github.sha }}
+         echo $GITHU_WORKFLOW - {{ github.workflow }}
+         echo $GITHUB_WORKSPACE - {{ github.workspace }}
+         echo  {{ github.token }}
+
      - name: checkout
        uses: actions/checkout@v1
 
@@ -24,8 +28,8 @@ jobs:
          ls -a
      - name: simple java script action
        id: hello
-       run: echo "hello world"
 
      - name: get output time
        run: echo output of time "${{ steps.hello.outputs.time }}"
+
 
